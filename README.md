@@ -21,11 +21,10 @@ https://img.wenhairu.com/image/AL2y0
 https://img.wenhairu.com/image/AL3XU
 
 #### 发现页面
-<img src="https://cdn.img.wenhairu.com/images/2020/01/17/AL2y0.jpg" width=375>
-
+<img src="https://cdn.img.wenhairu.com/images/2020/01/17/ALz9g.png" width=375>
 
 #### 我的页面
-<img src="https://cdn.img.wenhairu.com/images/2020/01/17/AL3XU.png" width=375>
+<img src="https://cdn.img.wenhairu.com/images/2020/01/17/ALt6j.png" width=375>
 
 
 ### 系列文章
