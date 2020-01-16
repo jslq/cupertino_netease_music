@@ -10,6 +10,7 @@ import 'stick_content.dart';
 
 const double navbarHeight = 88.0;
 
+// 定义一个高度的控制器
 class HeightController extends ChangeNotifier{
   HeightController(): _height = 151.0;
 
@@ -33,8 +34,8 @@ class MinePage extends StatefulWidget {
 class _MinePageState extends State<MinePage> {
   // 定义一个滚动控制器
   final _controller = ScrollController();
+  //实例化高度控制器
   final _heightController = HeightController();
-  // 设置背景图片的高度
 
   @override
   void initState() {
