@@ -1,0 +1,93 @@
+{
+  "id": "1594788",
+  "name": "netease_music",
+  "font_family": "iconfont",
+  "css_prefix_text": "icon-",
+  "description": "网易云音乐图标",
+  "glyphs": [
+    {
+      "icon_id": "12639082",
+      "name": "music",
+      "font_class": "music",
+      "unicode": "e625",
+      "unicode_decimal": 58917
+    },
+    {
+      "icon_id": "12639083",
+      "name": "shipin",
+      "font_class": "shipin",
+      "unicode": "e626",
+      "unicode_decimal": 58918
+    },
+    {
+      "icon_id": "12639084",
+      "name": "yuncun",
+      "font_class": "yuncun",
+      "unicode": "e627",
+      "unicode_decimal": 58919
+    },
+    {
+      "icon_id": "12639085",
+      "name": "zhanghao",
+      "font_class": "zhanghao",
+      "unicode": "e628",
+      "unicode_decimal": 58920
+    },
+    {
+      "icon_id": "12639087",
+      "name": "shiqu",
+      "font_class": "shiqu",
+      "unicode": "e62a",
+      "unicode_decimal": 58922
+    },
+    {
+      "icon_id": "12639408",
+      "name": "wode",
+      "font_class": "wode",
+      "unicode": "e629",
+      "unicode_decimal": 58921
+    },
+    {
+      "icon_id": "12639409",
+      "name": "discover",
+      "font_class": "discover",
+      "unicode": "e62b",
+      "unicode_decimal": 58923
+    },
+    {
+      "icon_id": "12658840",
+      "name": "netease-music",
+      "font_class": "netease-music",
+      "unicode": "e62c",
+      "unicode_decimal": 58924
+    },
+    {
+      "icon_id": "12785258",
+      "name": "local_music",
+      "font_class": "local_music",
+      "unicode": "e62d",
+      "unicode_decimal": 58925
+    },
+    {
+      "icon_id": "12785261",
+      "name": "cloud",
+      "font_class": "cloud",
+      "unicode": "e630",
+      "unicode_decimal": 58928
+    },
+    {
+      "icon_id": "12785908",
+      "name": "mine_collection",
+      "font_class": "mine_collection",
+      "unicode": "e62e",
+      "unicode_decimal": 58926
+    },
+    {
+      "icon_id": "12785910",
+      "name": "mine_radio",
+      "font_class": "mine_radio",
+      "unicode": "e62f",
+      "unicode_decimal": 58927
+    }
+  ]
+}
