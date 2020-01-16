@@ -18,10 +18,10 @@ class NetUtils {
 ### 部分效果图
 
 #### 发现页面
-![发现页面](pic/发现页面.png)
+<img src="./pic/discover_page.png" width=375>
 
 #### 我的页面
-![我的页面](pic/我的页面.png)
+<img src="./pic/mine_page.png" width=375>
 
 
 ### 系列文章
@@ -30,3 +30,4 @@ class NetUtils {
 > + [《Flutter 实战：如何设置一个透明的CupertinoNavigationBar》](https://juejin.im/post/5e1c1ddce51d451c774dc7af)
 > 
 > + [《Flutter实战： 如何实现网易云音乐7.0（新版）我的页面的动态背景效果》](https://juejin.im/post/5e20a7086fb9a02fcb1f7bf2)
+https://github.com/jslq/cupertino_netease_music/blob/master/pic/%E5%8F%91%E7%8E%B0%E9%A1%B5%E9%9D%A2.png
