@@ -2,7 +2,7 @@
 
 > 之前有大神写过Material风格的网易云音乐 [github地址](https://github.com/fluttercandies/NeteaseCloudMusic),本着学习的态度，参考大神的工程架构和代码风格，尝试做一个Cupertino风格（iOS）的网易云音乐。恰逢最近网易云更新7.0版本，页面有很大变化。具有挑战难度。
 >
-> 我是19年12月才接触futter和dart，之前是web前端开发，现阶段代码有写丑陋，以联系widget使用和实现ui构建，简单功能实现为主
+> 我是19年12月才接触futter和dart，之前是web前端开发，项目以widget使用和实现ui构建，简单功能实现为主
 
 ### 注意事项
 
