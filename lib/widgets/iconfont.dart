@@ -15,4 +15,8 @@ class NeMusicIcon {
   static const IconData cloud = const IconData( 0xe630, fontFamily: "NeMusicIcon");
   static const IconData mine_collection = const IconData( 0xe62e, fontFamily: "NeMusicIcon");
   static const IconData mine_radio = const IconData( 0xe62f, fontFamily: "NeMusicIcon");
+  static const IconData comment = const IconData( 0xe631, fontFamily: "NeMusicIcon");
+  static const IconData download = const IconData( 0xe632, fontFamily: "NeMusicIcon");
+  static const IconData multiple = const IconData( 0xe633, fontFamily: "NeMusicIcon");
+  static const IconData share = const IconData( 0xe634, fontFamily: "NeMusicIcon");
 }

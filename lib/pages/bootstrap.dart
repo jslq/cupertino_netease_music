@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:ne_music/application.dart';
 import 'package:provider/provider.dart';
 import 'package:ne_music/providers/user_model.dart';
@@ -16,6 +17,7 @@ class _BootstrapPageState extends State<BootstrapPage> {
   @override
   void initState() {
     super.initState();
+
     // 初始化网络请求
     Future net = NetUtils.init();
     // 初始化sp，都是异步的
@@ -37,6 +39,8 @@ class _BootstrapPageState extends State<BootstrapPage> {
 
   @override
   Widget build(BuildContext context) {
+    ScreenUtil.init(context, width: 750, height: 1334, allowFontScaling: true);
+
     return Container(
       width: double.infinity,
       height: double.infinity,

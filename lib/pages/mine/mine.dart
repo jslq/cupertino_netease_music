@@ -5,8 +5,9 @@ import 'package:ne_music/providers/user_model.dart';
 import 'package:ne_music/widgets/iconfont.dart';
 
 import 'package:ne_music/widgets/transparent_cupertino_navigation_bar.dart';
+import 'package:ne_music/widgets/stick_content.dart';
 import 'profile.dart';
-import 'stick_content.dart';
+import 'main_board.dart' show MainBoard;
 
 const double navbarHeight = 88.0;
 
@@ -72,7 +73,11 @@ class _MinePageState extends State<MinePage> {
                 SliverToBoxAdapter(
                   child: MineProfile(),
                 ),
-                BuildStickyContent()
+                BuildStickyContent(
+                  minHeight: 250,
+                  maxHeight: 1000,
+                  child: MainBoard(),
+                )
               ],
             ),
           )
@@ -92,6 +97,13 @@ class _MinePageState extends State<MinePage> {
       border: Border(bottom: BorderSide(color: Colors.transparent, width: 0.0)),
     );
     return bar;
+  }
+
+  @override
+  void dispose() {
+    // TODO: implement dispose
+    super.dispose();
+    _controller.dispose();
   }
 }
 

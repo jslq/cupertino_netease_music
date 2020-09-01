@@ -60,11 +60,13 @@ class _CustomGridListState extends State<CustomGridList> {
       }
 
       if(i == widgets.length - 1) {
-        // 如果当前行的元素小雨每行个数，那么填充进去空的
-        while(_newRow.length < axisCount) {
-          _newRow.add(Expanded(flex: 1, child: Container(),));
+          // 如果当前行的元素小雨每行个数，那么填充进去空的
+        if (_newRow.length < axisCount) {
+          while(_newRow.length != 0 && _newRow.length < axisCount) {
+            _newRow.add(Expanded(flex: 1, child: Container(),));
+          }
+          result.add(_buildConstrainedRow(_newRow));
         }
-        result.add(_buildConstrainedRow(_newRow));
       }
     }
     return result;

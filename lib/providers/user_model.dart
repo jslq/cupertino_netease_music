@@ -10,7 +10,7 @@ class UserModel with ChangeNotifier {
 
   User get user => _user;
 
-   /// 初始化 User
+  /// 初始化 User
   void initUser() {
     if (Application.sp.containsKey('user')) {
       String s = Application.sp.getString('user');

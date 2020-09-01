@@ -4,7 +4,8 @@ import 'package:ne_music/utils/constant.dart';
 import 'package:ne_music/widgets/iconfont.dart';
 import 'package:ne_music/pages/discover/discover.dart';
 import 'package:ne_music/pages/mine/mine.dart';
-
+import 'package:ne_music/pages/test.dart';
+import 'package:ne_music/pages/account/account.dart';
 
 class MainBoard extends StatelessWidget {
   final navs = <dynamic>[
@@ -45,9 +46,13 @@ class MainBoard extends StatelessWidget {
               case 0:
                 return DiscoverPage();
               case 1: 
-                return Container();
+                return TestPage();
               case 2: 
                 return MinePage();
+              case 3: 
+                return SliverPage();
+              case 3: 
+                return Account();
             }
             return Container();
           },

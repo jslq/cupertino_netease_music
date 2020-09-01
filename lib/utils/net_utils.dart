@@ -14,7 +14,9 @@ Map<String, String> apis = <String, String> {
   // 登录
   'login': '/login/cellphone',
   'recommendList': '/recommend/resource',
-  'songlist': '/user/playlist'
+  'songList': '/user/playlist',
+  'songDetail': '/playlist/detail',
+  'singleSongDetail': '/song/detail'
 };
 
 class NetUtils {
@@ -24,7 +26,9 @@ class NetUtils {
     _uid = value;
   }
   static Dio dio = Dio();
-  static const String baseUrl = 'http://192.168.1.103:3000';
+  static const String baseUrl = 'http://192.168.1.104:3000/';
+  // static const String baseUrl = 'http://120.79.212.251:8081';
+
 
   static Future init() async {
     dio.options.baseUrl = baseUrl;
@@ -67,6 +71,8 @@ class NetUtils {
     return user;
   }
 
+  // banner
+
   // 推荐歌单
   static Future<RecommendList> getRecommondList(
     BuildContext context
@@ -79,9 +85,31 @@ class NetUtils {
   static Future<SongList> getSongList(
     BuildContext context
   ) async {
-    Map<String, dynamic> result = await _get(context, apis['songlist'], parmas: {
+    Map<String, dynamic> result = await _get(context, apis['songList'], parmas: {
       'uid': NetUtils.uid
     });
     return SongList.fromJson(result);
+  }
+
+  // 歌单详情
+  static Future<SongDetail> getSongDetail(
+    BuildContext context,
+    int id,
+  ) async {
+    Map<String, dynamic> result = await _get(context, apis['songDetail'], parmas: {
+      'id': id
+    });
+    return SongDetail.fromJson(result);
+  }
+
+  // 多个歌曲详情,从歌单播放
+  static Future<SingleSongDetails> getSingleSongDetails(
+    BuildContext context,
+    String ids,
+  ) async {
+    Map<String, dynamic> result = await _get(context, apis['singleSongDetail'], parmas: {
+      'ids': ids
+    });
+    return SingleSongDetails.fromJson(result);
   }
 }

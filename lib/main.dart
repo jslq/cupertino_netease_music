@@ -25,13 +25,14 @@ class MyApp extends StatelessWidget {
           create: (_) => UserModel(),
         ),
         ChangeNotifierProvider(
-          create: (_) => SongListModel(),
-        ),
+          create: (_) => SongListModel()..init(),
+        )
       ],
       child: new CupertinoApp(
         theme: CupertinoThemeData(
           primaryColor: Application.themeColor,
           scaffoldBackgroundColor: Colors.white,
+          barBackgroundColor: Application.themeColor,
           textTheme: CupertinoTextThemeData(
             textStyle: TextStyle(
               color: Colors.black,

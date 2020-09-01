@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:ne_music/utils/navigator_util.dart';
 import 'package:ne_music/widgets/custom_future_builder.dart';
 import 'package:provider/provider.dart';
 import 'package:ne_music/widgets/simple_tab.dart';
@@ -153,7 +154,7 @@ class _SongListState extends State<SongList> {
             padding: EdgeInsets.only(right: 15),
             child: Row(
               children: [
-                Text('创建歌单'),
+                Text('创建歌单', style: TextStyle(fontSize: 16, fontWeight: FontWeight.w600),),
                 Text(value.songList.list.where((_) => _.ordered == false).toList().length.toString(), style: TextStyle(fontSize: 10))
               ]
             ),
@@ -167,7 +168,7 @@ class _SongListState extends State<SongList> {
             padding: EdgeInsets.only(right: 15.0),
             child: Row(
               children: [
-                Text('收藏歌单'),
+                Text('收藏歌单', style: TextStyle(fontSize: 16, fontWeight: FontWeight.w600),),
                 Text(value.songList.list.where((_) => _.ordered == true).toList().length.toString(), style: TextStyle(fontSize: 10))
               ]
             ),
@@ -177,7 +178,7 @@ class _SongListState extends State<SongList> {
     ))..add(SimpleTabItem(
       child: Row(
         children: [
-          Text('歌单助手'),
+          Text('歌单助手', style: TextStyle(fontSize: 16, fontWeight: FontWeight.w600),),
           Text('beta', style: TextStyle(fontSize: 10))
         ]
       )
@@ -202,54 +203,59 @@ class SongGridList extends StatelessWidget {
         spacing: 10,
         rowHeight: 60,
         rowSpacing: 14,
-        children: _buildList(),
+        children: _buildList(context),
       ),
     );
   }
 
-  List<Widget> _buildList() {
+  List<Widget> _buildList(BuildContext context) {
     final List<Widget> res = [];
     for(int i = 0; i < data.length; i++) {
       res.add(
-        Row(
-          children: <Widget>[
-            Container(
-              decoration: BoxDecoration(
-                borderRadius: BorderRadius.all(Radius.circular(6.0)),
-                border: Border.all(color: Colors.grey.withOpacity(.6)),
-              ),
-              margin: EdgeInsets.only(right: 8.0),
-              width: 60,
-              height: 60,
-              child:  ClipRRect(
-                borderRadius: BorderRadius.all(Radius.circular(6.0)),
-                child: Image(
-                  image: NetworkImage(data[i].coverImgUrl),
+        GestureDetector(
+          onTap: () {
+            NavigatorUtil.goSongListDetailPage(context, data[i].id);
+          },
+          child: Row(
+            children: <Widget>[
+              Container(
+                decoration: BoxDecoration(
+                  borderRadius: BorderRadius.all(Radius.circular(6.0)),
+                  border: Border.all(color: Colors.grey.withOpacity(.2)),
+                ),
+                margin: EdgeInsets.only(right: 8.0),
+                width: 60,
+                height: 60,
+                child:  ClipRRect(
+                  borderRadius: BorderRadius.all(Radius.circular(5.0)),
+                  child: Image(
+                    image: NetworkImage(data[i].coverImgUrl),
+                  ),
                 ),
               ),
-            ),
-            Expanded(
-              child: Column(
-                mainAxisAlignment: MainAxisAlignment.center,
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  Text(data[i].name,
-                    style: TextStyle(
-                      fontSize: 13.0,
+              Expanded(
+                child: Column(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Text(data[i].name,
+                      style: TextStyle(
+                        fontSize: 13.0,
+                      ),
+                      overflow: TextOverflow.ellipsis,
+                      maxLines: 2,
                     ),
-                    overflow: TextOverflow.ellipsis,
-                    maxLines: 2,
-                  ),
-                  Text('${data[i].trackCount}首', 
-                    style: TextStyle(
-                      fontSize: 12,
-                      color: Colors.grey.withOpacity(.8),
+                    Text('${data[i].trackCount}首', 
+                      style: TextStyle(
+                        fontSize: 12,
+                        color: Colors.grey.withOpacity(.8),
+                      )
                     )
-                  )
-                ]
-              ),
-            )
-          ],
+                  ]
+                ),
+              )
+            ],
+          ),
         )
       );
     }

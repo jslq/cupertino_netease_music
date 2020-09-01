@@ -8,6 +8,8 @@ class Routes {
   static String phone = '/phone';
   static String password = '/password';
   static String mainBoard = '/main';
+  static String songListDetail = '/song/detail';
+  static String playSong = '/song/play';
 
   static void configureRoutes(Router router) {
     router.notFoundHandler = Handler(
@@ -19,11 +21,14 @@ class Routes {
     router.define(phone, handler: phoneHander);
     router.define(password, handler: passwordHander);
     router.define(mainBoard, handler: mainBoardHander);
+    router.define(songListDetail, handler: songListDetailHander);
+    router.define(playSong, handler: playSongHandler);
   }
 
-  static String withParams(String path, Map<String, String> params) {
+  /// 为请求地址之后添加参数
+  static String withParams(String path, Map<String, dynamic> params) {
     String str = '?';
-    List<MapEntry<String, String>> paramsList = params.entries.toList();
+    List<MapEntry<String, dynamic>> paramsList = params.entries.toList();
     for(int index = 0;index < paramsList.length; index +=1) {
       MapEntry current = paramsList[index];
       str += (index == 0 ? '' : '\$') + '${current.key}=${current.value}';

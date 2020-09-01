@@ -153,7 +153,6 @@ class _PhonePageState extends State<PhonePage> {
                     ),
                     suffix: GestureDetector(
                       onTap: () {
-                        print('33');
                       },
                       child: Container(
                         alignment: Alignment.center,
@@ -285,7 +284,6 @@ class _PasswordPageState extends State<PasswordPage> {
                   ),
                   suffix: GestureDetector(
                     onTap: () {
-                      print('33');
                     },
                     child: Container(
                       alignment: Alignment.center,

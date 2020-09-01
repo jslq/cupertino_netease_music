@@ -1,3 +1,5 @@
+import 'dart:ui';
+
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:ne_music/utils/constant.dart';
@@ -35,7 +37,7 @@ class _DiscoverPageState extends State<DiscoverPage> {
               ],
             ),
             ItemLinkBar(),
-            RecommendListView(),
+            // RecommendListView(),
           ],
         ),
       ),
@@ -48,7 +50,6 @@ class _DiscoverPageState extends State<DiscoverPage> {
       border: Border(),
       leading: GestureDetector(
         onTap: () {
-          print('左侧');
         },
         child: Icon(NeMusicIcon.shiqu,
           size: 23,
@@ -57,7 +58,6 @@ class _DiscoverPageState extends State<DiscoverPage> {
       ),
       trailing: GestureDetector(
         onTap: () {
-          print('右侧');
         },
         child: Icon(NeMusicIcon.music,
           size: 20,
